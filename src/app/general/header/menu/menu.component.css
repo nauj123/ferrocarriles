@@ -1,0 +1,33 @@
+.menu-principal li{
+    text-align: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+.menu-principal li a{
+    white-space: break-spaces;
+}
+
+.menu-principal .dropdown-menu li{
+    text-align: start;
+}
+
+.menu-principal .dropdown-menu li a{
+    border-bottom: 1px solid;
+}
+
+@media (min-width: 992px) {
+    .menu-principal .dropdown-menu{
+        width: max-content;
+    }
+
+    .menu-principal li{
+        display: flex;
+    }
+
+    .menu-principal li a{
+        white-space: normal;
+    }
+}

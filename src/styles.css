@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: "WorkSans-Bold";
+	src: url("../src/assets/fonts/Work_Sans/static/WorkSans-Bold.ttf");
+}
+
+@font-face {
+	font-family: "WorkSans-SemiBold";
+	src: url("../src/assets/fonts/Work_Sans/static/WorkSans-SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "WorkSans-Medium";
+	src: url("../src/assets/fonts/Work_Sans/static/WorkSans-Medium.ttf");
+}
+
+@font-face {
+	font-family: "WorkSans-Regular";
+	src: url("../src/assets/fonts/Work_Sans/static/WorkSans-Regular.ttf");
+}
+
+body{
+   margin: 0;
+}
+
+.borde-azul{
+   border-color: #004884;
+}
+
+.borde-azul-light,
+.menu-principal .dropdown-menu li a{
+   border-color: #e6effd;
+}
+
+.fuente-azul,
+.menu-principal li{
+   color: #004884;
+}
+
+.bg-azul,
+.menu-principal li:hover,
+.menu-principal .nav-item.show, 
+.menu-principal .dropdown-menu a{
+   background-color: #004884;
+}
+
+.bg-azul-light{
+   background-color: #e6effd;
+}
+
+.menu-principal li,
+.fb-work-medium{
+   font-family: "WorkSans-Medium", sans-serif;
+}
+
+.fuente-blanco,
+.menu-principal li:hover a,
+.menu-principal li .nav-link.show,
+.menu-principal .dropdown-menu a{
+   color: white;
+}
