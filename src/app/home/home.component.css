@@ -1,0 +1,13 @@
+*{
+  display: flex;
+}
+
+.container {
+  background-color: #f6f8f9;
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  body {
+    background-color: #f6f8f9;
+  }
+}

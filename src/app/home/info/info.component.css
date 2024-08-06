@@ -1,0 +1,45 @@
+h1 {
+  text-align: start;
+  position:relative;
+  color: #2A9EBD;
+  margin: 1%;
+}
+h1 span {
+background:#fff;
+z-index:1;
+position:relative;
+padding:15px;
+}
+h1::after  {
+  content: '';
+  position: absolute;
+  width:100rem;
+  height:0.2rem;
+  left:0px;
+  top:2rem;
+  background:#2A9EBD;;
+  z-index:0;
+}
+.titleSection{
+  color: #2A9EBD;
+}
+.textColor {
+  color: #004884;
+  margin: 2%;
+  text-align: start;
+  position:relative;
+}
+
+.rowContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2%;
+  gap: 10px;
+   .div-col {
+    background-color: #2A9EBD;
+    align-content: flex-start;
+    width: 25rem;
+    height: 25rem;
+    margin-bottom: 2%;
+   }
+}

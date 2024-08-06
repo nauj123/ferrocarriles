@@ -1,0 +1,54 @@
+.textColor {
+  color: #004884;
+  font-family:url(/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf);
+  font-weight: bold;
+}
+.textP {
+  font-size: 22pt;
+}
+.textC {
+  font-size: 10pt;
+  text-align: center;
+}
+
+
+.colButtons {
+  width: 50%;
+  align-items: center;
+  margin: 2em 10em;
+  .bor {
+    border-right: #004884;
+    border:0.2em;
+   }
+}
+
+/*.imgSize {
+  width: 5rem;
+  height: 6rem;
+  align-self: center;
+  margin: 0.2rem;
+ }*/
+
+.rowContainer {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  margin: 2%;
+  gap: 10px;
+   .card {
+    background-color: #E6EFFD;
+    border-color: #E6EFFD;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 2%;
+   }
+   .iconsButns {
+    text-align: center;
+    font-size: 3rem;
+   }
+
+   .colorButton{
+    background-color: #2A9EBD;
+   }
+
+}
+
