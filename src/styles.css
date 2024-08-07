@@ -1,2 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: "WorkSans-Bold";
+	src: url("/assets/fonts/Work_Sans/static/WorkSans-Bold.ttf");
+}
 
+@font-face {
+	font-family: "WorkSans-SemiBold";
+	src: url("/assets/fonts/Work_Sans/static/WorkSans-SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "WorkSans-Medium";
+	src: url("/assets/fonts/Work_Sans/static/WorkSans-Medium.ttf");
+}
+
+@font-face {
+	font-family: "WorkSans-Regular";
+	src: url("/assets/fonts/Work_Sans/static/WorkSans-Regular.ttf");
+}
+
+body{
+   margin: 0;
+}
+
+.borde-azul{
+   border-color: #004884;
+}
+
+.borde-azul-light,
+.menu-principal .dropdown-menu li a{
+   border-color: #e6effd;
+}
+
+.fuente-azul,
+.menu-principal li a,
+.barra-accesibilidad-govco .icon-contraste::after,
+.barra-accesibilidad-govco .icon-reducir::after,
+.barra-accesibilidad-govco .icon-aumentar::after{
+   color: #004884;
+}
+
+.bg-azul,
+.menu-principal li:hover,
+.menu-principal .nav-item.show, 
+.menu-principal .dropdown-menu a{
+   background-color: #004884;
+}
+
+.bg-azul-light{
+   background-color: #e6effd;
+}
+
+.menu-principal li,
+.fb-work-medium{
+   font-family: "WorkSans-Medium", sans-serif;
+}
+
+.fuente-blanco,
+.menu-principal li:hover a,
+.menu-principal li .nav-link.show,
+.menu-principal .dropdown-menu a{
+   color: white;
+}
+
+.fuente-0 {
+   font-size: 0.5rem;
+ }
+ 
+ .fuente-1 {
+   font-size: 0.6rem;
+ }
+ 
+ .fuente-2 {
+   font-size: 0.7rem;
+ }
+ 
+ .fuente-3 {
+   font-size: 0.8rem;
+ }
+ 
+ .fuente-4 {
+   font-size: 0.9rem;
+ }
+ 
+ .fuente-5 {
+   font-size: 1rem;
+ }
+ 
+ .fuente-6 {
+   font-size: 1.1rem;
+ }
+ 
+ .fuente-7 {
+   font-size: 1.2rem;
+ }
+ 
+ .fuente-8 {
+   font-size: 1.3rem;
+ }
+ 
+ .fuente-9 {
+   font-size: 1.4rem;
+ }
+ 
+ .fuente-10 {
+   font-size: 1.5rem;
+ }
+ 
+.hight-contrast {
+   -webkit-filter: invert(1);
+   filter: invert(1);
+   background-color: #fff;
+ }
