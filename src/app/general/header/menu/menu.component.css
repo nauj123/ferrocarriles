@@ -1,13 +1,13 @@
 .menu-principal li{
     text-align: center;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
 }
 
 .menu-principal li a{
-    white-space: break-spaces;
+    white-space: normal;
 }
 
 .menu-principal .dropdown-menu li{
@@ -18,16 +18,24 @@
     border-bottom: 1px solid;
 }
 
+.menu-principal .navbar-collapse{
+    overflow: auto;
+    height: 65vh;
+}
+
 @media (min-width: 992px) {
+    .menu-principal .navbar-collapse{
+        overflow: visible;
+        height: auto;
+    }
+
     .menu-principal .dropdown-menu{
+        min-width: 120%;
         width: max-content;
     }
 
     .menu-principal li{
         display: flex;
-    }
-
-    .menu-principal li a{
-        white-space: normal;
+        font-size: 0.7rem;
     }
 }

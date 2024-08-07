@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:fps": "node dist/fps/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -17,8 +16,7 @@
     "@angular/core": "^18.0.0",
     "@angular/forms": "^18.0.0",
     "@angular/platform-browser": "^18.0.0",
-    "@angular/platform-browser-dynamic": "^18.0.0",
-    "@angular/platform-server": "^18.0.0",
+    "@angular/platform-browser-dynamic": "^18.0.0",    
     "@angular/router": "^18.0.0",
     "@angular/ssr": "^18.0.7",
     "@ng-bootstrap/ng-bootstrap": "^17.0.0",

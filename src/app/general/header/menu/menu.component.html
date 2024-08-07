@@ -1,86 +1,51 @@
 <nav role="navigation" class="navbar navbar-expand-lg p-0 menu-principal">
-  <div class="container-fluid p-0 py-2">
+  <div class="container-fluid p-0">
     <button
       type="button"
       (click)="collapse.toggle()"
       [attr.aria-expanded]="!isCollapsed"
       aria-controls="collapseExample"
-      class="navbar-toggler mx-2"
+      class="navbar-toggler m-2"
       [ngClass]="{ collapsed: !isCollapsed }"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div
-      class="collapse navbar-collapse bg-azul-light mt-2 mt-lg-0"
+      class="collapse navbar-collapse bg-azul-light px-lg-4 mt-2 mt-lg-0"
       #collapse="ngbCollapse"
       [(ngbCollapse)]="isCollapsed"
     >
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/" role="button"> INICIO </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/" role="button">
-            TRANSPARENCIA Y ACCESO A LA INFORMACION PÚBLICA
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="ciudadania" role="button">
-            ATENCIÓN Y SERVICIOS A LA CIUDADANÍA
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="participa" role="button"> PARTICIPA </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="sala" role="button"> SALA DE PRENSA </a>
-        </li>
-        <li ngbDropdown class="nav-item">
+      <ul class="navbar-nav col-12 p-0 d-flex justify-content-between">
+        <li ngbDropdown class="nav-item" *ngFor="let item of menu">
           <a
+            *ngIf="item.submenu.length == 0"
+            class="nav-link"
+            routerLink="/"
+            role="button"
+          >
+            {{ item.nombre }}
+          </a>
+          <a
+            *ngIf="item.submenu.length > 0"
             ngbDropdownToggle
             class="nav-link"
-            id="servicios-salud"
+            routerLink="/"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            SERVICIOS DE SALUD
+            {{ item.nombre }}
           </a>
           <ul
             ngbDropdownMenu
-            aria-labelledby="servicios-salud"
-            class="m-0 pb-0 rounded-0 border-0 bg-azul"
+            class="m-0 pb-0 rounded-0 border-0 bg-azul col-12 p-0 pb-2"
           >
-            <li>
-              <a ngbDropdownItem>Canal de Atención Servicios de Salud</a>
+            <li *ngFor="let sitem of item.submenu">
+              <a ngbDropdownItem class="nav-link" routerLink="/" role="button">
+                {{ sitem.nombre }}
+              </a>
             </li>
-            <li>
-              <a ngbDropdownItem
-                >Cobertura de Operación y Red de Prestadores de Salud</a
-              >
-            </li>
-            <li>
-              <a ngbDropdownItem>Sistema de Afiliación Transaccional (SAT)</a>
-            </li>
-            <li>
-              <a ngbDropdownItem
-                >Ruta de promoción y mantenimiento de la salud</a
-              >
-            </li>
-            <li><a ngbDropdownItem>Indicadores de salud</a></li>
-            <li><a ngbDropdownItem>Afiliados</a></li>
-            <li><a ngbDropdownItem>Gestión del Riesgo</a></li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="planeacion" role="button">
-            PLANEACIÓN, GESTIÓN Y CONTROL
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="presupuestal" role="button">
-            INFORMACIÓN PRESUPUESTAL Y FINANCIERA
-          </a>
         </li>
       </ul>
     </div>
