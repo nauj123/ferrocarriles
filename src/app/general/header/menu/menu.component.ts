@@ -5,17 +5,25 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Menu } from '../../../interfaces/header';
+import { SearchComponent } from '../search/search.component';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [NgbCollapseModule, NgbDropdownModule, NgClass, NgFor, NgIf],
+  imports: [
+    NgbCollapseModule,
+    NgbDropdownModule,
+    NgClass,
+    NgFor,
+    NgIf,
+    SearchComponent,
+  ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css',
 })
 export class MenuComponent implements AfterViewInit {
   isCollapsed = true;
-  menu: Menu[] | undefined;
+  menu: Menu[];
 
   constructor() {
     this.menu = [

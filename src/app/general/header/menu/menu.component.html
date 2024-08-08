@@ -1,53 +1,68 @@
-<nav role="navigation" class="navbar navbar-expand-lg p-0 menu-principal">
-  <div class="container-fluid p-0">
-    <button
-      type="button"
-      (click)="collapse.toggle()"
-      [attr.aria-expanded]="!isCollapsed"
-      aria-controls="collapseExample"
-      class="navbar-toggler m-2"
-      [ngClass]="{ collapsed: !isCollapsed }"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div
-      class="collapse navbar-collapse bg-azul-light px-lg-4 mt-2 mt-lg-0"
-      #collapse="ngbCollapse"
-      [(ngbCollapse)]="isCollapsed"
-    >
-      <ul class="navbar-nav col-12 p-0 d-flex justify-content-between">
-        <li ngbDropdown class="nav-item" *ngFor="let item of menu">
-          <a
-            *ngIf="item.submenu.length == 0"
-            class="nav-link"
-            routerLink="/"
-            role="button"
-          >
-            {{ item.nombre }}
-          </a>
-          <a
-            *ngIf="item.submenu.length > 0"
-            ngbDropdownToggle
-            class="nav-link"
-            routerLink="/"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {{ item.nombre }}
-          </a>
-          <ul
-            ngbDropdownMenu
-            class="m-0 pb-0 rounded-0 border-0 bg-azul col-12 p-0 pb-2"
-          >
-            <li *ngFor="let sitem of item.submenu">
-              <a ngbDropdownItem class="nav-link" routerLink="/" role="button">
-                {{ sitem.nombre }}
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+<div class="container-navbar-menu-govco blue-menu-govco" id="menu">
+  <nav
+    class="navbar navbar-expand-lg navbar-menu-govco"
+    role="navigation"
+    aria-label="Menú ejemplo entidad"
+  >
+    <div class="container-fluid container-second-navbar-menu-govco">
+      <button
+        class="navbar-toggler button-responsive-menu-govco"
+        type="button"
+        aria-controls="navbarScroll"
+        aria-expanded="false"
+        (click)="collapse.toggle()"
+        [attr.aria-expanded]="!isCollapsed"
+        [ngClass]="{ collapsed: isCollapsed }"
+      >
+        <span class="icon-bars-menu-govco"></span>
+      </button>
+      <div
+        class="navbar-collapse navbar-collapse-menu-govco"
+        id="navbarScroll"
+        #collapse="ngbCollapse"
+        [(ngbCollapse)]="isCollapsed"
+      >
+        <div class="container-search-icon-menu-govco navbar-toggler">
+          <!-- SEARCH -->
+          <app-search></app-search>
+          <!-- END SEARCH -->
+        </div>
+        <ul class="navbar-nav navbar-nav-menu-govco ms-auto">
+          <li ngbDropdown class="nav-item" *ngFor="let item of menu">
+            <a
+              *ngIf="item.submenu.length == 0"
+              class="nav-link dir-menu-govco"
+              (routerLink)="(item.url)"
+              role="button"
+            >
+              <span class="text-item-menu-govco"> {{ item.nombre }} </span>
+            </a>
+            <a
+              *ngIf="item.submenu.length > 0"
+              ngbDropdownToggle
+              class="nav-link dir-menu-govco"
+              (routerLink)="(item.url)"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span class="text-item-menu-govco"> {{ item.nombre }} </span>
+            </a>
+            <ul ngbDropdownMenu>
+              <li *ngFor="let sitem of item.submenu">
+                <a
+                  ngbDropdownItem
+                  class="dir-menu-govco"
+                  (routerLink)="(item.url)"
+                  role="button"
+                >
+                  <span class="text-item-menu-govco"> {{ sitem.nombre }} </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>

@@ -1,5 +1,5 @@
 header{
-    position: fixed;
+    position: absolute;
     z-index: 1000;    
     top: 0;
 }
@@ -17,5 +17,9 @@ header{
 @media (min-width: 992px) {
     .div-logo{
         justify-content: start;
+    }
+    .div-superior{
+        padding-left: 4.375rem;
+        padding-right: 4.375rem;
     }
 }

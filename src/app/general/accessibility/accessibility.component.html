@@ -1,25 +1,15 @@
-<div class="content-example-barra position-absolute">
-  <div class="barra-accesibilidad-govco bg-azul">
-    <button
-      id="botoncontraste"
-      class="icon-contraste bg-azul"
-      (click)="cambiarContexto()"
-    >
-      <span id="titlecontraste">Contraste</span>
-    </button>
-    <button
-      id="botondisminuir"
-      class="icon-reducir bg-azul"
-      (click)="disminuirTamanio()"
-    >
-      <span id="titledisminuir">Reducir letra</span>
-    </button>
-    <button
-      id="botonaumentar"
-      class="icon-aumentar bg-azul"
-      (click)="aumentarTamanio()"
-    >
-      <span id="titleaumentar">Aumentar letra</span>
-    </button>
-  </div>
+<div class="barra-accesibilidad-govco">
+  <button
+    id="botoncontraste"
+    class="icon-contraste"
+    (click)="cambiarContexto()"
+  >
+    <span id="titlecontraste">Contraste</span>
+  </button>
+  <button id="botondisminuir" class="icon-reducir" (click)="disminuirTamanio()">
+    <span id="titledisminuir">Reducir letra</span>
+  </button>
+  <button id="botonaumentar" class="icon-aumentar" (click)="aumentarTamanio()">
+    <span id="titleaumentar">Aumentar letra</span>
+  </button>
 </div>

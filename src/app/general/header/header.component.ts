@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuComponent } from './menu/menu.component';
 import { TopbarComponent } from './topbar/topbar.component';
-import { SearchComponent } from './menu/search/search.component';
+import { SearchComponent } from './search/search.component';
 
 @Component({
   selector: 'app-header',

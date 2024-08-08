@@ -1,4 +1,11 @@
-import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Input,
+  OnInit,
+  Renderer2,
+} from '@angular/core';
 import { NavigationEnd, RouterOutlet, Router } from '@angular/router';
 import { AccessibilityComponent } from './general/accessibility/accessibility.component';
 import { FooterComponent } from './general/footer/footer.component';
@@ -20,6 +27,7 @@ import { debounceTime, fromEvent, throttleTime } from 'rxjs';
 export class AppComponent implements OnInit {
   @Input() minHeight?: number;
   @Input('app-root') topOffset?: number;
+
   private domElement: HTMLElement;
 
   constructor(
@@ -49,5 +57,26 @@ export class AppComponent implements OnInit {
     let height = document.getElementById('header')?.offsetHeight;
     this.renderer.setStyle(this.domElement, 'display', 'block');
     this.renderer.setStyle(this.domElement, 'margin-top', `${height}px`);
+  }
+
+  @HostListener('document:scroll', ['$event'])
+  moveHeader(event: any) {
+    let scroll = event.target.scrollingElement.scrollTop;
+    let heightTopbar = document.getElementById('topbar')?.offsetHeight;
+    let heightLogos = document.getElementById('logos')?.offsetHeight;
+    if (scroll >= heightTopbar! + heightLogos!) {
+      this.renderer.setStyle(
+        document.getElementById('menu'),
+        'position',
+        'fixed'
+      );
+    }
+    if (scroll < heightTopbar! + heightLogos!) {
+      this.renderer.setStyle(
+        document.getElementById('menu'),
+        'position',
+        'relative'
+      );
+    }
   }
 }

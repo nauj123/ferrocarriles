@@ -1,54 +1,43 @@
-.textColor {
-  color: #004884;
-  font-family:url(/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf);
-  font-weight: bold;
-}
 .textP {
-  font-size: 22pt;
-}
-.textC {
-  font-size: 10pt;
-  text-align: center;
+  color: var(--azul-o);
+  font-family: "WorkSans-Bold";
+  font-size: 1.3rem;
 }
 
-
-.colButtons {
-  width: 50%;
-  align-items: center;
-  margin: 2em 10em;
-  .bor {
-    border-right: #004884;
-    border:0.2em;
-   }
+.icon-normativa::before{
+  content: "\ec18";
 }
 
-/*.imgSize {
-  width: 5rem;
-  height: 6rem;
-  align-self: center;
-  margin: 0.2rem;
- }*/
-
-.rowContainer {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  margin: 2%;
-  gap: 10px;
-   .card {
-    background-color: #E6EFFD;
-    border-color: #E6EFFD;
-    width: 10rem;
-    height: 10rem;
-    margin-bottom: 2%;
-   }
-   .iconsButns {
-    text-align: center;
-    font-size: 3rem;
-   }
-
-   .colorButton{
-    background-color: #2A9EBD;
-   }
-
+.icon-rendicion::before{
+  content: "\ecf5";
 }
 
+.icon-anticorrupcion::before{
+  content: "\e83a";
+}
+
+.icon-peticiones::before{
+  content: "\ec0c";
+}
+
+.icon-contratacion::before{
+  content: "\ebaa";
+}
+
+.icon-documento::before{
+  content: '\e949';
+}
+
+.icon-invoice::before{
+  content: '\e94c';
+}
+
+.icon-download::before{
+  content: '\e947';
+}
+
+.borde-sombra{
+  height: 100%;
+  width: 9px;
+  box-shadow: 5px 0 5px -2px #888;
+}
