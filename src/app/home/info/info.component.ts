@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Infobtn } from '../../interfaces/home';
 
 @Component({
   selector: 'app-info',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './info.component.css'
 })
 export class InfoComponent {
+  infobtn: Infobtn[] | undefined;
+
+  constructor() {
+
+  }
+
 
 }

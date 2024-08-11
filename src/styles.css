@@ -121,8 +121,24 @@
   }
 }
 
+.boton-amarillo{
+  display: block;
+  padding: 0.4rem 2rem;
+  font-size: 1rem;
+  font-family: "WorkSans-Medium";
+  color: white;
+  border: 0;
+  border-radius: 50rem;
+  background-color: var(--amarillo);
+  transition: all 0.3s ease-in-out;
+
+  a {
+    text-decoration: none;
+  }
+}
+
 .boton-comun:hover{
-  background-color: var(--azul-o);
+  background-color: var(--amarillo-o);
 }
 
 /*accesibilidad*/
@@ -130,7 +146,7 @@
   -webkit-filter: invert(1);
   filter: invert(1);
   background-color: white;
-} 
+}
 
 .f-0 {
   font-size: 0.5rem; /*10px*/
