@@ -4,8 +4,11 @@
   font-size: 1.3rem;
 }
 
-.icon-normativa::before{
-  content: "\ec18";
+.rowContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 h1 {
@@ -39,22 +42,10 @@ h1::after  {
   position:relative;
 }
 
-.rowContainer {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 2%;
-  gap: 10px;
-   .div-col {
-    background-color: #2A9EBD;
-    width: 15rem;
-    height: 15rem;
-   }
-}
-
 .btn-imagen{
     padding: 0;
-    width: 12rem;
-    height: 12rem;
+    width: 14rem;
+    height: 14rem;
     a{
       display: flex;
       flex-wrap: wrap;
@@ -67,9 +58,8 @@ h1::after  {
       height: 100%;
       width: 100%;
       padding: 0.5rem;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
       font-family: 'WorkSans-Bold';
-      transition: all 0.3s ease-in-out;
     }
 
     a:hover{
@@ -80,12 +70,18 @@ h1::after  {
     .imagen{
       display: block;
       width: 100%;
-      height: 4rem;
+      height: 100%;
       font-size: 3rem;
+      background-color: var(--azul-t);
+      fill:var(--azul-o);
     }
-
-    .imagen::before{
-      font-family: "govco-font";
+    .imagen:hover{
+      background-color: var(--azul-o);
+      color: var(--amarillo);
     }
+     :disabled{
+      background-color: var(--gris-c);
+      color: var(--gris);
+     }
   }
 

@@ -9,11 +9,5 @@ import { Infobtn } from '../../interfaces/home';
   styleUrl: './info.component.css'
 })
 export class InfoComponent {
-  infobtn: Infobtn[] | undefined;
-
-  constructor() {
-
-  }
-
 
 }

@@ -49,7 +49,7 @@
   --azul: #3366cc;
   --azul-o: #004884;
   --azul-c: #e6effd;
-  --azul-t: #0da9c6;
+  --azul-t: #2A9EBD ;
   --blanco-o: #f6f8f9;
   --gris: #bababa;
   --gris-o: #4b4b4b;
@@ -121,6 +121,10 @@
   }
 }
 
+.boton-comun:hover{
+  background-color: var(--azul-o);
+}
+
 .boton-amarillo{
   display: block;
   padding: 0.4rem 2rem;
@@ -137,7 +141,7 @@
   }
 }
 
-.boton-comun:hover{
+.boton-amarillo:hover{
   background-color: var(--amarillo-o);
 }
 
