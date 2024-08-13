@@ -3,3 +3,11 @@ export interface Slider {
   imagen: string;
   url: string;
 }
+
+export interface Infobtn {
+  id: number;
+  name:string;
+  imagen: string;
+  imagenHover: string;
+  disableImg:string;
+}

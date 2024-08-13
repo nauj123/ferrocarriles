@@ -29,12 +29,12 @@ export class SliderComponent {
     this.slider = [
       {
         id: 1,
-        imagen: '/assets/img/sliderHome/145.jpg',
+        imagen: '/assets/img/Home/sliderHome/145.jpg',
         url: '',
       },
       {
         id: 3,
-        imagen: '/assets/img/sliderHome/146.jpg',
+        imagen: '/assets/img/Home/sliderHome/146.jpg',
         url: '',
       },
     ];

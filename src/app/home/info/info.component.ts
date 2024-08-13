@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Infobtn } from '../../interfaces/home';
 
 @Component({
   selector: 'app-info',

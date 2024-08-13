@@ -49,7 +49,7 @@
   --azul: #3366cc;
   --azul-o: #004884;
   --azul-c: #e6effd;
-  --azul-t: #0da9c6;
+  --azul-t: #2A9EBD ;
   --blanco-o: #f6f8f9;
   --gris: #bababa;
   --gris-o: #4b4b4b;
@@ -125,12 +125,32 @@
   background-color: var(--azul-o);
 }
 
+.boton-amarillo{
+  display: block;
+  padding: 0.4rem 2rem;
+  font-size: 1rem;
+  font-family: "WorkSans-Medium";
+  color: white;
+  border: 0;
+  border-radius: 50rem;
+  background-color: var(--amarillo);
+  transition: all 0.3s ease-in-out;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.boton-amarillo:hover{
+  background-color: var(--amarillo-o);
+}
+
 /*accesibilidad*/
 .hight-contrast {
   -webkit-filter: invert(1);
   filter: invert(1);
   background-color: white;
-} 
+}
 
 .f-0 {
   font-size: 0.5rem; /*10px*/

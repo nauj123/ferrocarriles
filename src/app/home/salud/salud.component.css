@@ -1,8 +1,7 @@
 h1 {
   text-align: start;
   position:relative;
-  color: #2A9EBD;
-  margin: 1%;
+  color: var(--azul-t);
 }
 h1 span {
 background:#fff;
@@ -13,19 +12,125 @@ padding:15px;
 h1::after  {
   content: '';
   position: absolute;
-  width:100rem;
+  width:100%;
   height:0.2rem;
   left:0px;
   top:2rem;
-  background:#2A9EBD;;
+  background: var(--azul-t);
   z-index:0;
 }
 .titleSection{
-  color: #2A9EBD;
+  color:var(--azul-t);
 }
 .textColor {
-  color: #004884;
-  margin: 2%;
-  text-align: start;
+  color: var(--azul-o);
   position:relative;
 }
+
+.mapa {
+  background-color: var(--gris-c);
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  background-color: var(--azul-o);
+}
+
+.indicador{
+  text-align: center;
+  color: var(--blanco-o);
+}
+.iconfile{
+  color: var(--amarillo-o);
+}
+
+.titleBanner{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--blanco-o);
+
+    span{
+      color: var(--amarillo-o);
+    }
+}
+
+.columnInfo {
+  padding: 0rem;
+  color: var(--blanco-o);
+  font-size: 1.3rem;
+  font-weight: 300;
+   .icon{
+    color: var(--amarillo-o);
+   }
+
+}
+
+.btn-banner{
+  padding: 0;
+  width: 8rem;
+  height: 8rem;
+  a{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 0.375rem;
+    background-color: var(--azul-t);
+    color: var(--blanco-o);
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    font-family: 'WorkSans-Bold';
+  }
+
+  a:hover{
+    background-color: var(--azul-c);
+    color: var(--azul-t);
+  }
+}
+
+.icon{
+  display: block;
+  width: 100%;
+  height: 4rem;
+  font-size: 3rem;
+  text-align: center;
+}
+.icon::before {
+  font-family: "govco-font";
+}
+
+.icon-afiliaciones::before{
+  content: "\e9EB";
+}
+.icon-promocionyprevencion::before{
+  content: "\e9B7";
+}
+.icon-indicadores::before{
+  content: "\ea9c";
+}
+.icon-derechosydeberes::before{
+  content: "\e9B5";
+}
+.icon-usuarios::before {
+  content: "\EC85";
+}
+.icon-prestadores::before {
+  content: "\EC4C";
+}
+.icon-municipios::before {
+  content: "\EBF5";
+}
+
+.doctor {
+  background: linear-gradient(to left,   var(--azul-o)50%, var(--gris-c) 50%);
+    img {
+      z-index:1;
+      height: 30rem;
+      margin-top: 8rem;
+    }
+}
+
