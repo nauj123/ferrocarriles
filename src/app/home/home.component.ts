@@ -5,9 +5,6 @@ import { SaludComponent } from './salud/salud.component';
 import { SliderComponent } from './slider/slider.component';
 import { ActionBtnsHomeComponent } from './action-btns-home/action-btns-home.component';
 
-
-
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -16,12 +13,9 @@ import { ActionBtnsHomeComponent } from './action-btns-home/action-btns-home.com
     NewsComponent,
     SaludComponent,
     SliderComponent,
-    ActionBtnsHomeComponent
-
+    ActionBtnsHomeComponent,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}

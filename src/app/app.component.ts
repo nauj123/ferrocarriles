@@ -6,7 +6,7 @@ import {
   OnInit,
   Renderer2,
 } from '@angular/core';
-import { NavigationEnd, RouterOutlet, Router } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { AccessibilityComponent } from './general/accessibility/accessibility.component';
 import { FooterComponent } from './general/footer/footer.component';
 import { HeaderComponent } from './general/header/header.component';
@@ -30,11 +30,7 @@ export class AppComponent implements OnInit {
 
   private domElement: HTMLElement;
 
-  constructor(
-    private router: Router,
-    private renderer: Renderer2,
-    private elementRef: ElementRef
-  ) {
+  constructor(private renderer: Renderer2, private elementRef: ElementRef) {
     this.domElement = this.elementRef.nativeElement as HTMLElement;
     fromEvent(window, 'resize')
       .pipe(throttleTime(1000), debounceTime(500))
@@ -42,12 +38,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.router.events.subscribe((evt: any) => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-    });
-
     setTimeout(() => {
       this.setHeight();
     }, 10);

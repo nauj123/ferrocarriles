@@ -6,11 +6,13 @@ import {
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Menu } from '../../../interfaces/header';
 import { SearchComponent } from '../search/search.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
   imports: [
+    RouterLink,
     NgbCollapseModule,
     NgbDropdownModule,
     NgClass,
