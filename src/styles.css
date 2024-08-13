@@ -110,6 +110,7 @@
   border-radius: 50rem;
   background-color: var(--azul-t);
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 
   .icon{
     margin-right: 0.5rem;
@@ -135,14 +136,89 @@
   border-radius: 50rem;
   background-color: var(--amarillo);
   transition: all 0.3s ease-in-out;
-
-  a {
-    text-decoration: none;
-  }
+  text-decoration: none;
+  width: max-content;
 }
 
 .boton-amarillo:hover{
   background-color: var(--amarillo-o);
+}
+
+.btn-imagen{
+  padding: 0;
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+
+  a{
+    padding: 0;
+    background-color: var(--azul-t);
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  img{
+    transition: all 0.3s ease-in-out; 
+    position: absolute;
+  }
+
+  .img-active{
+    opacity: 1;
+  }
+
+  .img-hover{
+    opacity: 0;
+  }
+}
+
+.btn-imagen:hover{  
+  .img-active{
+    opacity: 0;
+  }
+
+  .img-hover{
+    opacity: 1;
+  }
+}
+
+.btn-icono-azul{
+  padding: 0;
+  width: 8rem;
+  height: 8rem;
+
+  a{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 0.375rem;
+    background-color: var(--azul-t);
+    color: var(--blanco-o);
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    font-family: 'WorkSans-Bold';    
+    transition: all 0.3s ease-in-out;
+  }
+
+  .icon{
+    display: block;
+    width: 100%;
+    height: 4rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .icon::before {
+    font-family: "govco-font";
+  }
+
+  a:hover{
+    background-color: var(--azul-c);
+    color: var(--azul-t);
+  }
 }
 
 /*accesibilidad*/

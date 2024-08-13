@@ -8,9 +8,11 @@
     background-color:var(--azul-t);
     border-radius: 0%;
     width: 20rem;
-    height: 25rem;
     margin: 2rem;
-    border-color: none;
+    .card-footer{
+      background: none;
+      background-color:var(--azul-t);
+    }
    }
 }
 
@@ -39,8 +41,8 @@ h1::after  {
 }
 .textColor {
   color:var(--azul-o);
-  text-align: start;
-  position:relative;
+  font-family: "WorkSans-Bold";
+  font-size: 1.3rem;
 }
 P {
   font-size: 0.9rem;
