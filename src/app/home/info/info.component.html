@@ -9,119 +9,29 @@
   <div class="d-flex justify-content-center">
     <div class="botones">
       <div class="row rowContainer">
-        <div class="btn-imagen m-4 m-4">
-          <a href="#">
+        @for (info of infobtn; track info.id) {
+          <div class="btn-imagen m-4">
+            @if (info.state === "disabled") {
+            <a href="#" class="disabled">
             <img
+                src="{{urlSvg + info.id + disabledImg}}"
+              />
+            </a>
+          } @else {
+            <a href="#">
+              <img
               class="img-active"
-              src="/assets/img/Home/infoHome/interes01.svg"
+              src="{{info.url}}"
             />
             <img
               class="img-hover"
-              src="/assets/img/Home/infoHome/interes01_hover.svg"
+              src="{{urlSvg + info.id + hover}}"
             />
-            <!--
-        NOTIFICACIONES POR AVISO-->
-          </a>
-        </div>
-        <div class="btn-imagen m-4">
-          <a href="#">
-            <img
-              class="img-active"
-              src="/assets/img/Home/infoHome/interes02.svg"
-            />
-            <img
-              class="img-hover"
-              src="/assets/img/Home/infoHome/interes02_hover.svg"
-            />
-            <!--
-        INFORMACIÓN AL SUDADANO-->
-          </a>
-        </div>
-        <div class="btn-imagen m-4">
-          <a href="#">
-            <img
-              class="img-active"
-              src="/assets/img/Home/infoHome/interes03.svg"
-            />
-            <img
-              class="img-hover"
-              src="/assets/img/Home/infoHome/interes03_hover.svg"
-            />
-            <!--
-        GESTION DE PRESTACIONES-->
-          </a>
-        </div>
-        <div class="btn-imagen m-4">
-          <a href="#">
-            <img
-              class="img-active"
-              src="/assets/img/Home/infoHome/interes04.svg"
-            />
-            <img
-              class="img-hover"
-              src="/assets/img/Home/infoHome/interes04_hover.svg"
-            />
-            <!--
-        VENTANILLA VIRTUAL-->
-          </a>
-        </div>
+            </a>
+            }
+          </div>
 
-        <div class="btn-imagen m-4">
-          <a href="#">
-            <img
-              class="img-active"
-              src="/assets/img/Home/infoHome/interes05.svg"
-            />
-            <img
-              class="img-hover"
-              src="/assets/img/Home/infoHome/interes05_hover.svg"
-            />
-            <!--
-        CALENDARIO DE ACTIVIDADES-->
-          </a>
-        </div>
-        <div class="btn-imagen m-4">
-          <a href="#">
-            <img
-              class="img-active"
-              src="/assets/img/Home/infoHome/interes06.svg"
-            />
-            <img
-              class="img-hover"
-              src="/assets/img/Home/infoHome/interes06_hover.svg"
-            />
-            <!--
-       PAGOS IPS Y PROVEEDORES-->
-          </a>
-        </div>
-        <div class="btn-imagen m-4">
-          <a href="#">
-            <img
-              class="img-active"
-              src="/assets/img/Home/infoHome/interes07.svg"
-            />
-            <img
-              class="img-hover"
-              src="/assets/img/Home/infoHome/interes07_hover.svg"
-            />
-            <!--
-        URNA DE CRISTAL-->
-          </a>
-        </div>
-        <div class="btn-imagen m-4">
-          <a href="#">
-            <img
-              class="img-active"
-              src="/assets/img/Home/infoHome/interes08.svg"
-            />
-            <img
-              class="img-hover"
-              src="/assets/img/Home/infoHome/interes08_hover.svg"
-            />
-            <!--
-        SECCIÓN DE NIÑOS-->
-          </a>
-        </div>
+          }
       </div>
     </div>
   </div>

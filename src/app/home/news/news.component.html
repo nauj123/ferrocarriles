@@ -7,44 +7,27 @@
   </p>
 
   <div class="rowContainer">
-    <div class="card">
-      <img src="assets/img/Home/newsHome/noticias1.PNG" class="card-img-top" />
-      <div class="card-body">
-        <p class="card-text text-white">
-          13 FEBRERO 2024<br />
-          <b>Circular de envio de ordenes de cirugías</b>
-        </p>
-      </div>
-      <div class="card-footer border-0 py-3">
-        <a href="#" class="boton-amarillo">LEER NOTICIA COMPLETA</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="assets/img/Home/newsHome/noticias2.PNG" class="card-img-top" />
-      <div class="card-body">
-        <p class="card-text text-white">
-          18 ENERO 2024<br />
-          <b>Circular cuotas moderadoras y copagos</b>
-        </p>
-      </div>
-      <div class="card-footer border-0 py-3">
-        <a href="#" class="boton-amarillo">LEER NOTICIA COMPLETA</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="assets/img/Home/newsHome/noticias3.PNG" class="card-img-top" />
-      <div class="card-body">
-        <p class="card-text text-white">
-          30 DICIEMBRE 2023<br />
-          <b>Resolución no.2537 de 28 de diciembre de 2023</b>
-        </p>
-      </div>
-      <div class="card-footer border-0 py-3">
-        <a href="#" class="boton-amarillo">LEER NOTICIA COMPLETA</a>
-      </div>
-    </div>
-  </div>
 
+    @for (news of newsC; track news.id) {
+      @if (news.id <= 3 ){
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="{{news.urlImage}}" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text text-white">
+                {{news.date}}<br />
+                <b>{{news.info}}</b>
+              </p>
+            </div>
+            <div class="card-footer border-0 py-3">
+              <a href="#" class="boton-amarillo">LEER NOTICIA COMPLETA</a>
+            </div>
+          </div>
+
+        </div>
+
+      }
+  }
   <div class="d-flex justify-content-center mb-4">
     <button class="boton-comun mb-4" type="button">CARGAR MÁS NOTICIAS</button>
   </div>

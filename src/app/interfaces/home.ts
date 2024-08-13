@@ -7,6 +7,13 @@ export interface Slider {
 export interface Infobtn {
   id: number;
   url:string;
+  state: string;
+}
 
+export interface newsCard {
+  id: number;
+  urlImage: string;
+  info: string;
+  date: string;
 }
 
