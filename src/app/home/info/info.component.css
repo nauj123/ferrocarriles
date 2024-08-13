@@ -55,8 +55,6 @@ h1::after  {
       color: var(--azul-o);
       text-align: center;
       text-decoration: none;
-      height: 100%;
-      width: 100%;
       padding: 0.5rem;
       font-size: 0.9rem;
       font-family: 'WorkSans-Bold';
@@ -71,17 +69,6 @@ h1::after  {
       display: block;
       width: 100%;
       height: 100%;
-      font-size: 3rem;
-      background-color: var(--azul-t);
-      fill:var(--azul-o);
     }
-    .imagen:hover{
-      background-color: var(--azul-o);
-      color: var(--amarillo);
-    }
-     :disabled{
-      background-color: var(--gris-c);
-      color: var(--gris);
-     }
   }
 

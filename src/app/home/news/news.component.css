@@ -12,7 +12,11 @@
     margin: 2rem;
     border-color: none;
    }
+   a {
+    text-decoration: none;
+   }
 }
+
 
 h1 {
   text-align: start;

@@ -126,7 +126,7 @@ h1::after  {
 }
 
 .doctor {
-  background: linear-gradient(to left,   var(--azul-o)50%, var(--gris-c) 50%);
+
     img {
       z-index:1;
       height: 30rem;
