@@ -4,6 +4,9 @@ import { NewsComponent } from './news/news.component';
 import { SaludComponent } from './salud/salud.component';
 import { SliderComponent } from './slider/slider.component';
 import { ActionBtnsHomeComponent } from './action-btns-home/action-btns-home.component';
+import { EventosComponent } from './eventos/eventos.component';
+import { MultimediaComponent } from './multimedia/multimedia.component';
+import { LeyTransferenciaComponent } from './ley-transferencia/ley-transferencia.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +17,9 @@ import { ActionBtnsHomeComponent } from './action-btns-home/action-btns-home.com
     SaludComponent,
     SliderComponent,
     ActionBtnsHomeComponent,
+    EventosComponent,
+    MultimediaComponent,
+    LeyTransferenciaComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
